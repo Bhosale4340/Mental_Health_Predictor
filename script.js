@@ -328,7 +328,7 @@
     } catch (err) {
       renderError(
         "Can't reach the server",
-        `Couldn't connect to ${API_BASE}. Make sure the backend is running (uvicorn main:app --port 2200 --reload) and reachable from this page.`,
+        `Couldn't connect to ${API_BASE}. Make sure the backend is running (python -m uvicorn main:app --host 127.0.0.1 --port 8000) and reachable from this page.`,
       );
     } finally {
       setSubmitting(false);
